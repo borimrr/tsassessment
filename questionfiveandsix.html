@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Form</title>
+
+    <style type="text/css">
+        .form-label {
+            color: #5000B8FF;
+        }
+
+        #click_me {
+            background-color: #e80061;
+        }
+    </style>
+</head>
+<body>
+<form>
+    <label class="form-label">new button text</label>
+    <input type="text" id="new_text" name="new_text">
+    <button type="button" id="click_me">Click Me</button>
+</form>
+</body>
+
+<script type="text/javascript">
+    document.querySelector('#click_me').addEventListener('click', function () {
+        if (document.getElementById('new_text').value) {
+            document.querySelector('#click_me').innerHTML = document.getElementById('new_text').value;
+        }
+    }, false);
+</script>
+</html>
